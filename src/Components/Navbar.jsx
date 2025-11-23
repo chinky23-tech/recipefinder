@@ -171,7 +171,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-             
+             <button className="bg-gray-700">get started</button>
             </div>
           </div>
         </div>
