@@ -66,7 +66,7 @@ const Navbar = () => {
 
   const navItems = {
     industries: ["Industry 1", "Industry 2", "Industry 3", "Industry 4", "Industry 5", "Industry 6", "Industry 7", "Industry 8", "Industry 9"],
-    services: ["Service 1", "Service 2", "Service 3", "Service 4"],
+    services: ["Main menu", "Service 2", "Service 3", "Service 4"],
      about: ["Company", "Team", "Contact Info"],
   };
 
@@ -171,7 +171,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-              <button className="text-gray-900">Get Started</button>
+             
             </div>
           </div>
         </div>
