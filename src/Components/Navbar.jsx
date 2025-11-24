@@ -1,180 +1,86 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState({
-    industries: false,
-    services: false,
-     about: false,
-  });
-
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileDropdowns, setMobileDropdowns] = useState({
-    industries: false,
-    services: false,
-   about: false,
-  });
-
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  const isLandingPage = location.pathname === "/";
-
-  useEffect(() => {
-    if (isLandingPage) {
-      const handleScroll = () => {
-        if (window.innerWidth >= 768) {
-          setScrolled(window.scrollY > 10);
-        } else {
-          setScrolled(false);
-        }
-      };
-
-      let ticking = false;
-      const throttledScroll = () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            handleScroll();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      window.addEventListener("scroll", throttledScroll);
-      window.addEventListener("resize", handleScroll);
-
-      return () => {
-        window.removeEventListener("scroll", throttledScroll);
-        window.removeEventListener("resize", handleScroll);
-      };
-    } else {
-      setScrolled(true);
-    }
-  }, [isLandingPage]);
-
-  const getNavbarBackground = () => {
-    if (!isLandingPage) {
-      return "bg-blue-900 text-white shadow-lg";
-    }
-    return scrolled ? "bg-blue-900 text-white shadow-lg" : "bg-transparent text-white";
-  };
-
-  const handleMouseEnter = (name) => setDropdownOpen((prev) => ({ ...prev, [name]: true }));
-  const handleMouseLeave = (name) => setDropdownOpen((prev) => ({ ...prev, [name]: false }));
-  const toggleMobileDropdown = (name) => setMobileDropdowns((prev) => ({ ...prev, [name]: !prev[name] }));
-
-  const navItems = {
-    industries: ["Industry 1", "Industry 2", "Industry 3", "Industry 4", "Industry 5", "Industry 6", "Industry 7", "Industry 8", "Industry 9"],
-    services: ["Main menu", "Service 2", "Service 3", "Service 4"],
-     about: ["Company", "Team", "Contact Info"],
-  };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavbarBackground()}`}>
-      <div className="max-w-8xl mx-auto px-6 flex justify-between items-center h-16">
+    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold pl-2 z-50 font-sans">Global Solutions Tech</Link>
+        <Link to="/" className="text-2xl font-bold text-green-600">
+          RecipeHub
+        </Link>
 
-        {/* desktop menu */}
-        <ul className="hidden md:flex space-x-4 items-center font-sans">
-          {Object.keys(navItems).map((key) => (
-            <li key={key} className="relative">
-              <div onMouseEnter={() => handleMouseEnter(key)} onMouseLeave={() => handleMouseLeave(key)}>
-                <button className={`flex items-center px-2 py-1 transition-colors duration-200 font-medium ${!isLandingPage || scrolled ? 'hover:text-gray-300' : 'hover:text-blue-200'}`}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                  <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${dropdownOpen[key] ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {dropdownOpen[key] && (
-                  <ul className="absolute top-full left-0 bg-blue-900 rounded shadow-lg min-w-[180px] mt-0 z-50 font-sans">
-                    {navItems[key].map((item, idx) => (
-                      <li key={idx} className="px-3 py-2 hover:bg-blue-700 whitespace-nowrap transition-colors duration-200">
-                        <Link 
-                          to={`/${key.toLowerCase()}/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                          onClick={() => setDropdownOpen(prev => ({...prev, [key]: false}))}
-                          className="block w-full"
-                        >
-                          {item}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </li>
-          ))}
-
-          <li>
-            <Link 
-              to="/contact" 
-              className={`px-2 py-1 transition-colors duration-200 font-medium ${!isLandingPage || scrolled ? 'hover:text-gray-300' : 'hover:text-blue-200'}`}
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-lg font-medium">
+          <li><Link to="/" className="hover:text-green-600">Home</Link></li>
+          
+          {/* Dropdown */}
+          <li className="relative">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="hover:text-green-600 flex items-center"
             >
-              Contact
-            </Link>
+              Recipes ▼
+            </button>
+
+            {dropdownOpen && (
+              <ul className="absolute bg-white shadow-lg mt-3 rounded-lg w-40">
+                <li className="px-4 py-2 hover:bg-green-50">
+                  <Link to="/breakfast">Breakfast</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-green-50">
+                  <Link to="/lunch">Lunch</Link>
+                </li>
+                <li className="px-4 py-2 hover:bg-green-50">
+                  <Link to="/dinner">Dinner</Link>
+                </li>
+              </ul>
+            )}
           </li>
+
+          <li><Link to="/about" className="hover:text-green-600">About</Link></li>
+          <li><Link to="/contact" className="hover:text-green-600">Contact</Link></li>
         </ul>
 
-        {/*  hamburger/close */}
-        <div className="md:hidden relative z-50">
-          <button className="p-2" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
-            {mobileOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          ☰
+        </button>
       </div>
 
-      {/* mobile menu */}
+      {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden fixed top-16 left-0 w-full h-[calc(100vh-4rem)] bg-blue-900 overflow-y-auto z-40 font-sans">
-          <div className="px-4 py-6 space-y-4">
-            {Object.keys(navItems).map((key) => (
-              <div key={key} className="border-b border-blue-700 pb-2">
-                <button className="w-full flex justify-between items-center py-3 text-lg font-semibold text-white" onClick={() => toggleMobileDropdown(key)}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                  <svg className={`w-5 h-5 transition-transform duration-200 ${mobileDropdowns[key] ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {mobileDropdowns[key] && (
-                  <div className="pl-4 mt-2 space-y-2">
-                    {navItems[key].map((item, idx) => (
-                      <Link 
-                        key={idx} 
-                        to={`/${key.toLowerCase()}/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="block py-2 px-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-white font-medium"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+        <ul className="md:hidden bg-white shadow-md text-lg font-medium px-6 py-4 space-y-4">
+          <li><Link to="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
 
-            {/* mobile contact */}
-            <div className="border-b border-blue-700 pb-2">
-              <Link 
-                to="/contact" 
-                className="block py-3 text-lg font-semibold text-white"
-                onClick={() => setMobileOpen(false)}
-              >
-                Contact
-              </Link>
-             <button className="bg-gray-700">get started</button>
-            </div>
-          </div>
-        </div>
+          {/* Mobile Dropdown */}
+          <li>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="w-full text-left"
+            >
+              Recipes ▼
+            </button>
+
+            {dropdownOpen && (
+              <ul className="ml-4 mt-2 space-y-2">
+                <li><Link to="/breakfast">Breakfast</Link></li>
+                <li><Link to="/lunch">Lunch</Link></li>
+                <li><Link to="/dinner">Dinner</Link></li>
+              </ul>
+            )}
+          </li>
+
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
       )}
     </nav>
   );
