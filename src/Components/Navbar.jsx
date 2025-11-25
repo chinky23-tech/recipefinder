@@ -10,19 +10,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-amber-600 ">
+        <Link to="/" className="text-2xl font-bold text-orange-600 ">
           RecipeHub
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-lg font-medium">
-          <li><Link to="/" className="hover:text-orange-100">Home</Link></li>
+        <ul className="hidden md:flex space-x-8 text-lg font-medium text-orange-600">
+          <li><Link to="/" className="hover:text-orange-600">Home</Link></li>
           
           {/* Dropdown */}
           <li className="relative">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="hover:text-green-600 flex items-center"
+              className="hover:text-orange-300 flex items-center"
             >
               Recipes ▼
             </button>
