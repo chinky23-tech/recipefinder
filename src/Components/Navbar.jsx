@@ -22,28 +22,37 @@ const Navbar = () => {
           <li className="relative">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="hover:text-orange-300 flex items-center"
+              className="hover:text-orange-600 flex items-center gap-1"
             >
-              Recipes ▼
+              Recipes 
+              <svg
+            className={`w-4 h-4 transition ${dropdownOpen ? "rotate-180" : ""}`}
+              fill="none"
+            stroke="currentColor"
+           strokeWidth="3"
+             viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
             </button>
 
             {dropdownOpen && (
               <ul className="absolute bg-white shadow-lg mt-3 rounded-lg w-40">
-                <li className="px-4 py-2 hover:bg-green-50">
+                <li className="px-4 py-2 hover:bg-orange-50">
                   <Link to="/breakfast">Breakfast</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-green-50">
+                <li className="px-4 py-2 hover:bg-orange-50">
                   <Link to="/lunch">Lunch</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-green-50">
+                <li className="px-4 py-2 hover:bg-orange-50">
                   <Link to="/dinner">Dinner</Link>
                 </li>
               </ul>
             )}
           </li>
 
-          <li><Link to="/about" className="hover:text-green-600">About</Link></li>
-          <li><Link to="/contact" className="hover:text-green-600">Contact</Link></li>
+          <li><Link to="/about" className="hover:text-orange-600">About</Link></li>
+          <li><Link to="/contact" className="hover:text-orange-600">Contact</Link></li>
         </ul>
 
         {/* Mobile Hamburger */}
