@@ -60,13 +60,22 @@ const Navbar = () => {
           className="md:hidden text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          ☰
+          <svg
+  className="w-6 h-6"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  viewBox="0 0 24 24"
+>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3 6h18M3 12h18M3 18h18" />
+</svg>
+
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <ul className="md:hidden bg-white shadow-md text-lg font-medium px-6 py-4 space-y-4">
+        <ul className="md:hidden bg-white text-orange-600 shadow-md text-lg font-medium px-6 py-4 space-y-4">
           <li><Link to="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
 
           {/* Mobile Dropdown */}
@@ -75,7 +84,17 @@ const Navbar = () => {
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="w-full text-left"
             >
-              Recipes ▼
+              Recipes 
+              <svg
+  className={`w-5 h-5 transition ${dropdownOpen ? "rotate-180" : ""}`}
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="3"     // <-- BOLDER LINE
+  viewBox="0 0 24 24"
+>
+  <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+</svg>
+
             </button>
 
             {dropdownOpen && (
