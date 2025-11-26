@@ -110,7 +110,9 @@ const Navbar = () => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       )}
+      <button className="bg-green-400">get start</button>
     </nav>
+    
   );
 };
 
