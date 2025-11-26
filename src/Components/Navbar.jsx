@@ -112,6 +112,8 @@ const Navbar = () => {
       )}
       <button className="bg-green-400">get start</button>
          <button className="bg-green-400">get start</button>
+            <button className="bg-green-400">get start</button>
+         <button className="bg-green-400">get start</button>
     </nav>
     
   );
