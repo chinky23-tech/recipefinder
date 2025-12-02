@@ -50,6 +50,9 @@ const Navbar = () => {
                  <li className="px-4 py-2 hover:bg-orange-50">
                   <Link to="/snacks">Snacks</Link>
                 </li>
+                <li className="px-4 py-2 hover:bg-orange-50">
+                  <Link to="/chat">Chat</Link>
+                </li>
               </ul>
             )}
           </li>
