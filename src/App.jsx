@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact";
 import Breakfast from "./Pages/Breakfast";
 import Lunch from "./Pages/Lunch";
 import Dinner from "./Pages/Dinner";
+import LoginPage from "./Pages/LoginPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Login" element={<LoginPage />} />
 
           {/* Dropdown Routes */}
           <Route path="/breakfast" element={<Breakfast />} />
