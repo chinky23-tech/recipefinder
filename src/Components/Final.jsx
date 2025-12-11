@@ -489,3 +489,39 @@ export default function UserDashboard() {
   );
 }
 */
+
+import React, { useEffect, useState, useCallback, useRef } from "react";
+import api from "../../api/api.js";
+import {
+  Upload,
+  FileText,
+  Download,
+  Eye,
+  Trash2,
+  Folder,
+  LogOut,
+  Building,
+  User,
+  X,
+  Loader2,
+  Home,
+  Menu,
+  X as XIcon,
+  ChevronLeft,
+  ChevronRight
+} from "lucide-react";
+
+// Helper function to get company ID from localStorage
+const getCompanyId = () => {
+  try {
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      const parsed = JSON.parse(userData);
+      return parsed.companyId || 1;
+    }
+  } catch (e) {
+    console.error("Error reading companyId:", e);
+  }
+  return 1;
+};
+
