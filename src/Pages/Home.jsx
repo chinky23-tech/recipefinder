@@ -14,6 +14,7 @@ function Home(){
        key={meal.idMeal}
        title={meal.strMeal}
         image={meal.strMealThumb}
+        
         />
         ))}
       </div>
