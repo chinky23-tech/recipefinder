@@ -14,7 +14,9 @@ export default function Input({
 }) {
 
   // Daisy UI input classes
-  const inputClasses = `input input-bordered w-full ${error ? 'input-error' : ''}`;
+  const inputClasses = `input input-bordered w-full border  border-base-content
+  focus:border-primary
+  focus:outline-none  ${error ? 'input-error' : ''}`;
 
   return (
     // 'form-control' is the Daisy UI wrapper for proper spacing
