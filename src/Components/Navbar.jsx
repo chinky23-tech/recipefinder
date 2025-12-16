@@ -122,5 +122,3 @@ const Navbar = () => {
 };
 
 export default Navbar;*/
-import { useState } from "react";
-import { Link } from "react-router-dom";
