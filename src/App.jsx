@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import SearchBar from "./Components/SearchBar"; 
+
 
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -14,8 +14,9 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <>
+   
       <Navbar />
-      <SearchBar />
+    
       <Footer />
       <div className="pt-20 px-4">
         <Routes>
@@ -35,3 +36,4 @@ function App() {
 }
 
 export default App;
+
