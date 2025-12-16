@@ -122,25 +122,5 @@ const Navbar = () => {
 };
 
 export default Navbar;*/
+import { useState } from "react";
 import { Link } from "react-router-dom";
-function Navbar(){
-  return (
-    <nav className="w-full bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/*logo*/}
-        <Link to="/"  className="text-2xl font-bold text-orange-600">
-        RecipeHub
-        </Link>
-        {/* Links */}
-        <ul className="hidden md:flex gap-8 text-lg font-medium">
-          <li>
-            <Link to="/" className="hover:text-orange-600">
-            Home
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  )
-}
-export default Navbar;
