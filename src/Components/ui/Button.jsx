@@ -42,7 +42,7 @@ export default function Button({
     >
       {/* Daisy UI Loading Spinner */}
       {isLoading && <span className="loading loading-spinner mr-2"></span>}
-            {isLoading && <span className="loading loading-spinner mr-2"></span>}
+            
       
       {children}
     </button>
