@@ -37,6 +37,7 @@ export default function Button({
   return (
     <button 
       className={classes} 
+      
       disabled={isLoading || props.disabled} // Disable if loading or explicitly disabled
       {...props}
     >
