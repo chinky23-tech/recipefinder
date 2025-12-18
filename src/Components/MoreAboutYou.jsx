@@ -16,7 +16,7 @@ export default function MoreAboutYou({ pharmacyId, onLogout }) {
         className="w-full border py-2 rounded"
       >
         Logout 
-        Logout
+   
       </button>
     </div>
   );
