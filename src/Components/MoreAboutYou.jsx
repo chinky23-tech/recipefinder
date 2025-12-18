@@ -15,6 +15,7 @@ export default function MoreAboutYou({ pharmacyId, onLogout }) {
         onClick={onLogout}
         className="w-full border py-2 rounded"
       >
+        Logout 
         Logout
       </button>
     </div>
