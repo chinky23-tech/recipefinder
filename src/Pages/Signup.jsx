@@ -49,6 +49,7 @@ export default function Signup() {
             pharmacyId={selectedPharmacy}
             onLogout={() => {
               alert("Logout");
+              alert("Logout");
             }}
           />
         )}
