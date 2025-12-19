@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 /*import Navbar from "./Components/Navbar";*/
 import Signup from "./Pages/Signup";
-
+import "./app.js";
 /*import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -17,6 +17,7 @@ function App() {
    
      {/* <Navbar />*/}
     <Signup />
+    
       {/*<Footer />
       <div className="pt-20 px-4">
         <Routes>
@@ -31,6 +32,7 @@ function App() {
           <Route path="/dinner" element={<Dinner />} />
         </Routes>
       </div>*/}
+        
     </>
   );
 }
