@@ -8,3 +8,8 @@ function world(){
     console.log("world");
 }
 setTimeout(world, 3000);
+
+function math(){
+    console.log("math");
+}
+setTimeout(math , 1000);
