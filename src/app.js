@@ -1,5 +1,6 @@
 function hello(){
     console.log("hello");
+    console.log("hello");
 
 }
-setTimeout(hello , 2000);
+setTimeout(hello , 3000);
