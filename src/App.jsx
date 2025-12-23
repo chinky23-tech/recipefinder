@@ -11,7 +11,7 @@ import Dinner from "./Pages/Dinner";
 import LoginPage from "./Pages/LoginPage";
 import Footer from "./Components/Footer";*/
 
- export function App() {
+  function App() {
   return (
     <>
    
@@ -37,5 +37,5 @@ import Footer from "./Components/Footer";*/
   );
 }
 
-
+export default App;
 
