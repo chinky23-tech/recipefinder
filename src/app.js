@@ -5,5 +5,5 @@ function hello(){
     
 }
 setTimeout(hello , 2000);
-setTimeout(hello , 2000);
+
 
