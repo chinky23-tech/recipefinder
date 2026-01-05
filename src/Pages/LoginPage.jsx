@@ -97,9 +97,7 @@ export default function LoginPage() {
           <p className="text-center text-sm pt-4">
             Don't have an account? <a href="#" className="link link-hover text-primary">Sign Up</a>
           </p>
-           <p className="text-center text-sm pt-4">
-            Don't have an account? <a href="#" className="link link-hover text-primary">Sign Up</a>
-          </p>
+       
           
         </form>
       </Card>
