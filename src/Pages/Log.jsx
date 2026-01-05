@@ -152,15 +152,7 @@ function Login() {
             Sign up
           </Link>
         </p>
-        <p className="text-sm text-center mt-4">
-          Don’t have an account?{" "}
-          <Link
-            to="/signup"
-            className="text-blue-600 hover:underline"
-          >
-            Sign up
-          </Link>
-        </p>
+       
       </Card>
     </div>
   );
