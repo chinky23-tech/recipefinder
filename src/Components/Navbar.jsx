@@ -1,4 +1,4 @@
-/*import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -9,16 +9,16 @@ const Navbar = () => {
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        {/* Logo *
+        {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-orange-600 ">
           RecipeHub
         </Link>
 
-        {/* Desktop Menu *
+        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium text-orange-600">
           <li><Link to="/" className="hover:text-orange-600">Home</Link></li>
-          
-          {/* Dropdown *
+
+          {/* Dropdown */}
           <li className="relative">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -59,7 +59,7 @@ const Navbar = () => {
          
         </ul>
 
-        {/* Mobile Hamburger *
+        {/* Mobile Hamburger */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -77,12 +77,12 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu *
+      {/* Mobile Menu */}
       {mobileOpen && (
         <ul className="md:hidden bg-white text-orange-600 shadow-md text-lg font-medium px-6 py-4 space-y-4">
           <li><Link to="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
 
-          {/* Mobile Dropdown *
+          {/* Mobile Dropdown */}
           <li>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -121,4 +121,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;*/
+export default Navbar;
