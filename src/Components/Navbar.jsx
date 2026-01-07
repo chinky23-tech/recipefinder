@@ -48,7 +48,7 @@ const Navbar = () => {
                   <Link to="/dinner">Dinner</Link>
                 </li>
                 <li className="px-4 py-2 hover:bg-orange-50">
-                  <Link to="/dinner">Dissert</Link>
+                  <Link to="/dessert">Dessert</Link>
                 </li>
                
                 
