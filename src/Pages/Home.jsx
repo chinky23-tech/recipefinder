@@ -13,7 +13,7 @@ function Home() {
             alt="Delicious food banner" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
+          <div className="absolute inset-0 bg-linear-to-r from-black/60 to-transparent flex items-center">
             <div className="text-white p-12 max-w-2xl">
               <h1 className="text-5xl font-bold mb-4">Discover Amazing Recipes</h1>
               <p className="text-xl mb-8">Find, save, and cook delicious recipes from around the world</p>
