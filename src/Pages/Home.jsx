@@ -7,7 +7,7 @@ function Home() {
     return (
       <>
         {/* Hero Banner Section */}
-        <div className="relative h-[500px] rounded-2xl overflow-hidden mb-12">
+        <div className="relative h-[600px] rounded-2xl overflow-hidden mb-12">
           <img 
             src={homeing} 
             alt="Delicious food banner" 
