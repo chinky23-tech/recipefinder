@@ -84,7 +84,7 @@ function Home() {
               <div className="flex items-center justify-between">
                 <span className="text-orange-500 font-semibold">90 min</span>
                 <button className="text-orange-500 hover:text-orange-600 font-semibold">
-                  View Recipe →
+                  View Recipe 
                 </button>
               </div>
             </div>
