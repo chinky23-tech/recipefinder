@@ -3,7 +3,7 @@ export default function Lunch() {
     <div>
       <h1 className="text-3xl font-bold">Lunch Recipes</h1>
     <h2 className="text-xl mt-4">Discover delicious lunch ideas to fuel your day!</h2>
-    
+<h1 className="text-2xl font-semibold mt-6">Featured Lunch Recipes</h1>
         
     </div>
   );
