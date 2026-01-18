@@ -99,7 +99,7 @@ export default function About() {
           <div>
             <div className="text-4xl font-bold text-orange-500 mb-2">24/7</div>
             <p className="text-gray-600">Support Available</p>
-                <p className="text-gray-600">Support Available</p>
+                
           </div>
         </div>
       </div>
