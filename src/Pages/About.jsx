@@ -78,6 +78,9 @@ export default function About() {
           <Button color="primary" size="lg" className="px-8 py-3">
             Start Cooking Today
           </Button>
+            <Button color="primary" size="lg" className="px-8 py-3">
+            Start Cooking Today
+          </Button>
         </div>
       </div>
 
