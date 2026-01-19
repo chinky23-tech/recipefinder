@@ -4,6 +4,7 @@ import Card from "../Components/ui/Card";
 import Input from "../Components/ui/Input"; 
 import Button from "../Components/ui/Button";
 import { useNavigate } from 'react-router-dom'; 
+import reactLogo from "../assets/react.svg"; 
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -53,10 +54,12 @@ export default function LoginPage() {
 
   return (
     // Daisy UI background and centering utilities
-    <div className="flex justify-center items-center min-h-screen bg-base-200 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 p-4">
+      
+      <img src={reactLogo} alt="RecipeFinder Logo" className="w-20 h-20 mx-auto mb-4" />
       
       {/* ⭐ Use the Card component as the form container */}
-      <Card title="Welcome to RecipeFinder" className="max-w-md">
+      <Card title="Welcome to RecipeFinder" className="max-w-md shadow-2xl">
         
         {/* ⭐ ADDED: Assign the handleSubmit function to the form */}
         <form className="space-y-4" onSubmit={handleSubmit}> 
@@ -81,6 +84,11 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+
+          {/* Forgot Password Link */}
+          <div className="text-right">
+            <a href="#" className="link link-hover text-primary text-sm">Forgot Password?</a>
+          </div>
 
           {/* Submit Button */}
           <div className="form-control mt-8">
