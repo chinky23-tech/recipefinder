@@ -54,7 +54,7 @@ export default function LoginPage() {
 
   return (
     // Daisy UI background and centering utilities
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 p-4">
+    <div className="flex justify-center items-center min-h-screen bg-linear-to-br from-orange-50 via-white to-yellow-50 p-4">
       
       <img src={reactLogo} alt="RecipeFinder Logo" className="w-20 h-20 mx-auto mb-4" />
       
