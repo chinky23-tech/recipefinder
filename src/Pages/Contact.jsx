@@ -58,7 +58,7 @@ export default function Contact() {
 
                 <div className="form-control mt-6">
                   <button className="btn btn-primary bg-orange-500 hover:bg-orange-600 border-none">
-                     Message
+                    Send Message
                   </button>
                 </div>
               </form>
