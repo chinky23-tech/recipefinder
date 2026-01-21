@@ -103,6 +103,9 @@ export default function Dinner() {
             <div className="card-actions justify-end">
               <button className="btn btn-primary">View Recipe</button>
             </div>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">View Recipe</button>
+            </div>
           </div>
         </div>
       </div>
