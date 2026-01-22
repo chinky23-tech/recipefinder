@@ -99,7 +99,7 @@ export default function Dinner() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Vegetable Curry</h2>
-             <h1 className="card-title">Vegetable Curry</h1>
+        
             <p>Aromatic vegetable curry with coconut milk and spices, served with rice.</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">View  Recipe</button>
