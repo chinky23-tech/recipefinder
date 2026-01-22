@@ -94,7 +94,69 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+
+          {/* Recipe Card 4 */}
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Grilled Salmon" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Herb-Crusted Grilled Salmon</h3>
+              <p className="text-gray-600 mb-4">Fresh salmon fillet with lemon herb crust and asparagus</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">25 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Recipe Card 5 */}
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Chicken Stir Fry" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Spicy Chicken Stir Fry</h3>
+              <p className="text-gray-600 mb-4">Tender chicken with colorful vegetables in savory sauce</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">20 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Recipe Card 6 */}
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Berry Smoothie" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Mixed Berry Smoothie Bowl</h3>
+              <p className="text-gray-600 mb-4">Antioxidant-rich berries blended with yogurt and topped with granola</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">10 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
 
         {/* Categories Section */}
         <div className="mt-16">
