@@ -1,11 +1,12 @@
 // Import images - adjust the paths based on your actual image locations
 import homeing from "../assets/homeing.avif";
 import reactLogo from "../assets/react.svg";
+import React from "react";
 
 
 function Home() {
     return (
-      <>
+      <React.Fragment>
         {/* Hero Banner Section */}
         <div className="relative h-[600px] rounded-2xl overflow-hidden mb-12 shadow-2xl">
           <img 
@@ -158,6 +159,8 @@ function Home() {
             </div>
           </div>
 
+        </div>
+
         {/* Categories Section */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8">Browse Categories</h2>
@@ -178,7 +181,7 @@ function Home() {
             ))}
           </div>
         </div>
-      </>
+      </React.Fragment>
     );
 }
 
