@@ -239,7 +239,7 @@ function Home() {
                 className={`${category.color} p-6 rounded-2xl text-center hover:scale-105 hover:shadow-lg transition duration-300 cursor-pointer`}
               >
                 <h3 className="text-xl font-bold">{category.name}</h3>
-                <p className="mt-2">120+ recipes</p>
+                <p className="mt-2">140+  recipes</p>
               </div>
             ))}
           </div>
