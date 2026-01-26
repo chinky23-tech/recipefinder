@@ -161,12 +161,75 @@ function Home() {
 
         </div>
 
+        {/* Vegan Recipes Section */}
+        <h2 className="text-3xl font-bold mb-8">Vegan Diet Recipes</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Vegan Buddha Bowl" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Vegan Buddha Bowl</h3>
+              <p className="text-gray-600 mb-4">Nutritious bowl with quinoa, roasted veggies, and tahini dressing</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">25 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Vegan Chocolate Avocado Mousse" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Chocolate Avocado Mousse</h3>
+              <p className="text-gray-600 mb-4">Creamy, rich dessert made with avocado and cocoa</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">15 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="h-64 overflow-hidden">
+              <img 
+                src={reactLogo} 
+                alt="Vegan Lentil Soup" 
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-2">Hearty Lentil Soup</h3>
+              <p className="text-gray-600 mb-4">Comforting soup with lentils, carrots, and spices</p>
+              <div className="flex items-center justify-between">
+                <span className="text-orange-500 font-semibold">40 min</span>
+                <button className="text-orange-500 hover:text-orange-600 font-semibold transition duration-300">
+                  View Recipe →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Categories Section */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8">Browse Categories</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { name: "🥬 Vegetarian", color: "bg-green-100 text-green-800" },
+              { name: "🥕 Vegan", color: "bg-lime-100 text-lime-800" },
               { name: "⚡ Quick & Easy", color: "bg-blue-100 text-blue-800" },
               { name: "🍰 Desserts", color: "bg-pink-100 text-pink-800" },
               { name: "💚 Healthy", color: "bg-emerald-100 text-emerald-800" },
