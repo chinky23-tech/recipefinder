@@ -85,6 +85,7 @@ export default function Dinner() {
             <p>Spicy beef tacos with fresh salsa, cheese, and avocado in soft tortillas.</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">View Recipe</button>
+                            <button className="btn btn-primary">View Recipe</button>
             </div>
           </div>
         </div>
