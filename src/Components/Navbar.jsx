@@ -6,7 +6,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="bg-linear-to-r from-orange-400 to-red-500 shadow-lg fixed top-0 left-0 right-0 z-50">
+    <div className="bg-gradient-to-r from-orange-400 to-red-500 shadow-lg fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-white hover:text-orange-100 transition-colors">
