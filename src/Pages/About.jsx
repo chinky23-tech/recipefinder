@@ -1,6 +1,5 @@
 import homeing from "../assets/homeing.avif";
 import Card from "../Components/ui/Card";
-import Button from "../Components/ui/Button";
 
 export default function About() {
   return (
@@ -75,12 +74,10 @@ export default function About() {
             To empower home cooks everywhere by providing accessible, diverse, and delicious recipes that inspire creativity
             in the kitchen and bring families together around the dinner table.
           </p>
-          <Button color="primary" size="lg" className="px-8 py-3">
+          <button className="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
             Start Cooking Today
-          </Button>
-            <Button color="primary" size="lg" className="px-8 py-3">
-            Start Cooking Today
-          </Button>
+          </button>
+          
         </div>
       </div>
 
