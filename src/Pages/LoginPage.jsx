@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 // ⭐ Import the Card component
 import Card from "../Components/ui/Card"; 
 import Input from "../Components/ui/Input"; 
@@ -58,13 +58,13 @@ export default function LoginPage() {
       
       <img src={reactLogo} alt="RecipeFinder Logo" className="w-20 h-20 mx-auto mb-4" />
       
-      {/* ⭐ Use the Card component as the form container */}
+      {/* ⭐ Use the Card component as the form container *
       <Card title="Welcome to RecipeFinder" className="max-w-md shadow-2xl">
         
-        {/* ⭐ ADDED: Assign the handleSubmit function to the form */}
+        {/* ⭐ ADDED: Assign the handleSubmit function to the form *
         <form className="space-y-4" onSubmit={handleSubmit}> 
           
-          {/* Email Field */}
+          {/* Email Field *
           <Input
             label="Email Address"
             type="email"
@@ -75,7 +75,7 @@ export default function LoginPage() {
             required
           />
 
-          {/* Password Field */}
+          {/* Password Field *
           <Input
             label="Password"
             type="password"
@@ -85,12 +85,12 @@ export default function LoginPage() {
             required
           />
 
-          {/* Forgot Password Link */}
+          {/* Forgot Password Link *
           <div className="text-right">
             <a href="#" className="link link-hover text-primary text-sm">Forgot Password?</a>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit Button *
           <div className="form-control mt-8">
             <Button 
               type="submit" 
@@ -111,4 +111,4 @@ export default function LoginPage() {
       </Card>
     </div>
   );
-}
+}*/
