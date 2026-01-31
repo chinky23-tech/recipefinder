@@ -211,7 +211,7 @@ export default function LoginPage() {
         {/* Logo with animation */}
         <div className="flex justify-center mb-6">
           <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-linear-to-r from-orange-400 to-yellow-400 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
             <img 
               src={reactLogo} 
               alt="RecipeFinder Logo" 
@@ -253,7 +253,7 @@ export default function LoginPage() {
 
             {/* Divider */}
             <div className="relative flex items-center">
-              <div className="flex-grow border-t border-gray-300"></div>
+              <div className="grow border-t border-gray-300"></div>
               <span className="flex-shrink mx-4 text-gray-500 text-sm">or continue with email</span>
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
