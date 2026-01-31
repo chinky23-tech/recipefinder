@@ -254,8 +254,8 @@ export default function LoginPage() {
             {/* Divider */}
             <div className="relative flex items-center">
               <div className="grow border-t border-gray-300"></div>
-              <span className="flex-shrink mx-4 text-gray-500 text-sm">or continue with email</span>
-              <div className="flex-grow border-t border-gray-300"></div>
+              <span className="shrink mx-4 text-gray-500 text-sm">or continue with email</span>
+              <div className="grow border-t border-gray-300"></div>
             </div>
 
             {/* Email Field */}
@@ -328,7 +328,7 @@ export default function LoginPage() {
               <span className="relative z-10">
                 {isSubmitting ? 'Signing in...' : 'Sign In'}
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-orange-500 to-yellow-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
             </Button>
 
             {/* Sign Up Link */}
