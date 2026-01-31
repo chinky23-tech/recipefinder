@@ -204,8 +204,8 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-orange-50 via-white to-yellow-50 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-100 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-yellow-100 to-transparent rounded-full translate-x-1/3 translate-y-1/3 blur-3xl opacity-50"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-linear-to-br from-orange-100 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tr from-yellow-100 to-transparent rounded-full translate-x-1/3 translate-y-1/3 blur-3xl opacity-50"></div>
       
       <div className="w-full max-w-md z-10 animate-fade-in">
         {/* Logo with animation */}
