@@ -43,7 +43,7 @@ export default function Breakfast() {
                 <button aria-label="View Berry Oatmeal Recipe" className="btn btn-primary btn-sm">View Recipe</button>
               </div>
             </div>
-            <div className="absolute inset-0 bg-orange-800 rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-orange-800 rounded-xl transform-[rotateY(180deg)] backface-hidden flex items-center justify-center p-4">
               <div className="text-white text-center">
                 <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                 <p className="text-sm">Rolled oats, almond milk, berries, flax seeds, maple syrup, cinnamon</p>
@@ -52,9 +52,9 @@ export default function Breakfast() {
           </div>
         </article>
 
-        <article className="group relative h-80 [perspective:1000px]">
-          <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(15deg)_rotateX(5deg)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-lime-400 to-green-500 rounded-xl shadow-2xl overflow-hidden [backface-visibility:hidden]">
+        <article className="group relative h-80 perspective-[1000px]">
+          <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(15deg)_rotateX(5deg)]">
+            <div className="absolute inset-0 bg-linear-to-br from-lime-400 to-green-500 rounded-xl shadow-2xl overflow-hidden backface-hidden">
               <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?w=800" alt="Green Smoothie Bowl" className="w-full h-1/2 object-cover" />
               <div className="h-1/2 bg-white p-4 flex flex-col justify-between">
                 <div>
@@ -67,7 +67,7 @@ export default function Breakfast() {
                 <button aria-label="View Green Smoothie Bowl Recipe" className="btn btn-primary btn-sm">View Recipe</button>
               </div>
             </div>
-            <div className="absolute inset-0 bg-green-900 rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-green-900 rounded-xl transform-[rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center p-4">
               <div className="text-white text-center">
                 <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                 <p className="text-sm">Kale, banana, avocado, plant protein, almond milk, seeds, kiwi</p>
@@ -76,9 +76,9 @@ export default function Breakfast() {
           </div>
         </article>
 
-        <article className="group relative h-80 [perspective:1000px]">
-          <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(15deg)_rotateX(5deg)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl shadow-2xl overflow-hidden [backface-visibility:hidden]">
+        <article className="group relative h-80 perspective-[1000px]">
+          <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(15deg)_rotateX(5deg)]">
+            <div className="absolute inset-0 bg-linear-to-br from-indigo-400 to-purple-500 rounded-xl shadow-2xl overflow-hidden backface-hidden">
               <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800" alt="Chia Pudding" className="w-full h-1/2 object-cover" />
               <div className="h-1/2 bg-white p-4 flex flex-col justify-between">
                 <div>
