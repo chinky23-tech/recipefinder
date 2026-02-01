@@ -91,7 +91,7 @@ export default function Breakfast() {
                 <button aria-label="View Chia Pudding Recipe" className="btn btn-primary btn-sm">View Recipe</button>
               </div>
             </div>
-            <div className="absolute inset-0 bg-purple-800 rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-purple-800 rounded-xl transform-[rotateY(180deg)] backface-hidden flex items-center justify-center p-4">
               <div className="text-white text-center">
                 <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                 <p className="text-sm">Chia seeds, almond milk, vanilla, banana, walnuts, honey</p>
