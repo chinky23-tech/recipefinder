@@ -4,8 +4,8 @@ export default function Breakfast() {
       <h1 className="text-4xl font-bold text-center mb-4 text-green-600">Healthy Vegan Breakfasts</h1>
       <p className="text-center text-sm text-gray-600 mb-8">Calorie estimates are per serving. Balanced, plant-based options to start your day.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: "1200px" }}>
-        <article className="group relative h-80 [perspective:1000px]">
-          <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(15deg)_rotateX(5deg)]">
+        <article className="group relative h-80 perspective-[1000px]">
+          <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(15deg)_rotateX(5deg)]">
             <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl shadow-2xl overflow-hidden [backface-visibility:hidden]">
               <img src="https://images.unsplash.com/photo-1542444459-db9a4f9b9c6d?w=800" alt="Tofu Scramble Bowl" className="w-full h-1/2 object-cover" />
               <div className="h-1/2 bg-white p-4 flex flex-col justify-between">
