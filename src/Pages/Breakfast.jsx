@@ -30,7 +30,7 @@ export default function Breakfast() {
 
         <article className="group relative h-80 perspective-[1000px]">
           <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(15deg)_rotateX(5deg)]">
-            <div className="absolute inset-0 bg-linear-to-br from-amber-400 to-orange-500 rounded-xl shadow-2xl overflow-hidden [backface-visibility:hidden]">
+            <div className="absolute inset-0 bg-linear-to-br from-amber-400 to-orange-500 rounded-xl shadow-2xl overflow-hidden backface-hidden">
               <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800" alt="Berry Oatmeal" className="w-full h-1/2 object-cover" />
               <div className="h-1/2 bg-white p-4 flex flex-col justify-between">
                 <div>
@@ -67,7 +67,7 @@ export default function Breakfast() {
                 <button aria-label="View Green Smoothie Bowl Recipe" className="btn btn-primary btn-sm">View Recipe</button>
               </div>
             </div>
-            <div className="absolute inset-0 bg-green-900 rounded-xl transform-[rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-green-900 rounded-xl transform-[rotateY(180deg)] backface-hidden flex items-center justify-center p-4">
               <div className="text-white text-center">
                 <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                 <p className="text-sm">Kale, banana, avocado, plant protein, almond milk, seeds, kiwi</p>
