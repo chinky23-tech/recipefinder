@@ -1,20 +1,20 @@
 
 import React from 'react';
 
-export default function Card({ title, children, className = '' }) {
+export default function Card({ title, subtitle, children, className = '', headerIcon }) {
   return (
-    // 'card' and 'bg-base-100' are Daisy UI/Tailwind classes for the container
-    <div className={`card w-full shadow-2xl bg-base-100 p-8 ${className}`}>
-      
-      {/* If a title is provided, display it in the header */}
-      {title && (
-        <h2 className="text-3xl font-bold text-center p-6 pb-0 text-primary">{title}</h2>
+    <div
+      className={`w-full overflow-hidden rounded-2xl border border-white/20 bg-white/60 backdrop-blur-sm shadow-2xl p-6 ${className}`}
+    >
+      {(title || subtitle) && (
+        <header className="mb-4 text-center">
+          {headerIcon && <div className="mx-auto mb-3 w-12 h-12 flex items-center justify-center rounded-full bg-white/40">{headerIcon}</div>}
+          {title && <h2 className="text-2xl font-semibold text-gray-900">{title}</h2>}
+          {subtitle && <p className="text-sm text-gray-600 mt-1">{subtitle}</p>}
+        </header>
       )}
 
-      {/* 'card-body' applies padding and flex alignment */}
-      <div className="card-body">
-        {children}
-      </div>
+      <div className="card-body">{children}</div>
     </div>
   );
 }

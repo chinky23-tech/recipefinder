@@ -208,21 +208,10 @@ export default function LoginPage() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tr from-yellow-100 to-transparent rounded-full translate-x-1/3 translate-y-1/3 blur-3xl opacity-50"></div>
       
       <div className="w-full max-w-md z-10 animate-fade-in">
-        {/* Logo with animation */}
-        <div className="flex justify-center mb-6">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-linear-to-r from-orange-400 to-yellow-400 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-            <img 
-              src={reactLogo} 
-              alt="RecipeFinder Logo" 
-              className="relative w-24 h-24 mx-auto transform group-hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        </div>
-
-        <Card 
-          title="Welcome Back 👋" 
+        <Card
+          title="Welcome Back 👋"
           subtitle="Sign in to discover delicious recipes"
+          headerIcon={<img src={reactLogo} alt="Logo" className="w-10 h-10 object-contain" />}
           className="shadow-2xl border border-gray-100/50 backdrop-blur-sm bg-white/80"
         >
           <form className="space-y-6" onSubmit={handleSubmit}>
