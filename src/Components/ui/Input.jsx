@@ -15,10 +15,10 @@ export default function Input({
 }) {
 
   // Improved input classes with nicer placeholder styling and spacing
-  const baseInput = `input input-bordered w-full border border-base-content
-    focus:border-primary focus:outline-none placeholder-gray-400 placeholder-opacity-80 placeholder:italic`;
+  const baseInput = `input input-bordered w-full border border-base-content rounded-lg
+    px-4 py-3 focus:border-primary focus:outline-none placeholder-gray-400 placeholder-opacity-80`;
 
-  const inputClasses = `${baseInput} ${icon ? 'pr-10' : ''} ${error ? 'input-error' : ''}`;
+  const inputClasses = `${baseInput} ${icon ? 'pr-12' : ''} ${error ? 'input-error' : ''}`;
 
   return (
     // 'form-control' is the Daisy UI wrapper for proper spacing
