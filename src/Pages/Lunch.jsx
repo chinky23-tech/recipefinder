@@ -270,7 +270,7 @@ export default function Lunch() {
                 <div className="text-white text-center">
                   <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                   <p className="text-sm">{recipe.ingredients}</p>
-                  <p className="text-sm">{recipe.ingredients}</p>
+                 
                 </div>
               </div>
             </div>
