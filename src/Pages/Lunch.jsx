@@ -269,6 +269,7 @@ export default function Lunch() {
               <div className={`absolute inset-0 ${recipe.bgColor} rounded-xl transform-[rotateY(180deg)] backface-hidden flex items-center justify-center p-4`}>
                 <div className="text-white text-center">
                   <h3 className="text-lg font-bold mb-2">Ingredients</h3>
+                     <h3 className="text-lg font-bold mb-2">Ingredients</h3>
                   <p className="text-sm">{recipe.ingredients}</p>
                  
                 </div>
