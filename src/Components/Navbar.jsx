@@ -34,10 +34,7 @@ const Navbar = () => {
         <Link to="/login" className="hidden lg:block bg-white text-orange-500 px-4 py-2 rounded-lg font-medium hover:bg-orange-100 transition-colors">
           Login
         </Link>
-            <Link to="/login" className="hidden lg:block bg-white text-orange-500 px-4 py-2 rounded-lg font-medium hover:bg-orange-100 transition-colors">
-          signup
-        </Link>
-
+        
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-white"
