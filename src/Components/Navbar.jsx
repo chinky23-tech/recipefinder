@@ -81,7 +81,9 @@ const Navbar = () => {
           <Link to="/about" className="block text-white hover:text-orange-100 font-medium" onClick={() => setMobileOpen(false)}>About</Link>
           <Link to="/contact" className="block text-white hover:text-orange-100 font-medium" onClick={() => setMobileOpen(false)}>Contact</Link>
           <Link to="/login" className="block text-white hover:text-orange-100 font-medium" onClick={() => setMobileOpen(false)}>Login</Link>
+          <Link to="/login" className="block text-white hover:text-orange-100 font-medium" onClick={() => setMobileOpen(false)}>Login</Link>
         </div>
+      
       )}
     </div>
   );
