@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import Card from "../Components/ui/Card"; 
 import Input from "../Components/ui/Input"; 
 import Button from "../Components/ui/Button";
@@ -90,8 +90,8 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-orange-50 via-white to-yellow-50 flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-linear-to-br from-orange-100 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
+      {/* Background decorative elements */
+      /*<div className="absolute top-0 left-0 w-72 h-72 bg-linear-to-br from-orange-100 to-transparent rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-linear-to-tr from-yellow-100 to-transparent rounded-full translate-x-1/3 translate-y-1/3 blur-3xl opacity-50"></div>
       
       <div className="w-full max-w-md z-10 animate-fade-in">
@@ -102,8 +102,8 @@ export default function LoginPage() {
           className="shadow-2xl border border-gray-100/50 backdrop-blur-sm bg-white/80"
         >
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {/* Social Login Buttons */}
-            <div className="grid grid-cols-3 gap-3">
+            {/* Social Login Buttons */
+            /*<div className="grid grid-cols-3 gap-3">
               <button
                 type="button"
                 onClick={() => handleSocialLogin('google')}
@@ -127,15 +127,15 @@ export default function LoginPage() {
               </button>
             </div>
 
-            {/* Divider */}
-            <div className="relative flex items-center">
+            {/* Divider */
+            /*<div className="relative flex items-center">
               <div className="grow border-t border-gray-300"></div>
               <span className="shrink mx-4 text-gray-500 text-sm">or continue with email</span>
               <div className="grow border-t border-gray-300"></div>
             </div>
 
-            {/* Email Field */}
-            <div className="space-y-2">
+            {/* Email Field */
+            /*<div className="space-y-2">
               <Input
                 label="Email Address"
                 type="email"
@@ -152,8 +152,8 @@ export default function LoginPage() {
               />
             </div>
 
-            {/* Password Field */}
-            <div className="space-y-2">
+            {/* Password Field */
+            /*<div className="space-y-2">
               <Input
                 label="Password"
                 type={showPassword ? "text" : "password"}
@@ -175,8 +175,8 @@ export default function LoginPage() {
               />
             </div>
 
-            {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
+            {/* Remember Me & Forgot Password */
+            /*<div className="flex items-center justify-between">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -194,8 +194,8 @@ export default function LoginPage() {
               </a>
             </div>
 
-            {/* Submit Button */}
-            <Button 
+            {/* Submit Button */
+            /*<Button 
               type="submit" 
               isBlock={true} 
               isLoading={isSubmitting}
@@ -208,8 +208,8 @@ export default function LoginPage() {
               <span className="absolute inset-0 bg-linear-to-r from-orange-500 to-yellow-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
             </Button>
 
-            {/* Sign Up Link */}
-            <p className="text-center text-sm pt-6 border-t border-gray-200">
+            {/* Sign Up Link */
+            /*<p className="text-center text-sm pt-6 border-t border-gray-200">
               Don't have an account?{' '}
               <a 
                 href="#" 
@@ -221,16 +221,16 @@ export default function LoginPage() {
           </form>
         </Card>
 
-        {/* Footer */}
-        <p className="text-center text-xs text-gray-500 mt-8">
+        {/* Footer */
+        /*<p className="text-center text-xs text-gray-500 mt-8">
           By signing in, you agree to our{' '}
           <a href="#" className="link link-hover">Terms</a> and{' '}
           <a href="#" className="link link-hover">Privacy Policy</a>
         </p>
       </div>
 
-      {/* Add custom styles */}
-      <style jsx>{`
+      {/* Add custom styles */
+      /*<style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
@@ -262,4 +262,4 @@ export default function LoginPage() {
       `}</style>
     </div>
   );
-}
+}*/
