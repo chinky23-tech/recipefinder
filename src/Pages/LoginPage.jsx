@@ -345,7 +345,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center p-4 relative overflow-hidden font-sans">
+    <div className="min-h-screen  bg-[#f9f9f9] flex items-center justify-center p-4 relative overflow-hidden font-sans">
       
       {/* 1. VIBRANT BACKGROUND ELEMENTS */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-300 rounded-full blur-[120px] opacity-40 animate-pulse"></div>
@@ -440,7 +440,7 @@ export default function LoginPage() {
               type="submit" 
               isBlock={true} 
               isLoading={isSubmitting}
-              className="w-full bg-gradient-to-r from-orange-500/90 to-yellow-500/90 hover:from-orange-500 hover:to-yellow-500 text-white shadow-lg border-none py-3 rounded-xl font-bold transition-all transform active:scale-[0.98]"
+              className="w-full bg-linear-to-r from-orange-500/90 to-yellow-500/90 hover:from-orange-500 hover:to-yellow-500 text-white shadow-lg border-none py-3 rounded-xl font-bold transition-all transform active:scale-[0.98]"
             >
               {isSubmitting ? 'Signing in...' : 'Sign In'}
             </Button>
