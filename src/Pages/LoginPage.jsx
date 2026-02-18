@@ -80,7 +80,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen  bg-[#f9f9f9] flex items-center justify-center p-4 relative overflow-hidden font-sans">
+    /*<div className="min-h-screen  bg-[#f9f9f9] flex items-center justify-center p-4 relative overflow-hidden font-sans">*/
+    <div className="min-h-screen  bg-gradient-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-4 relative overflow-hidden font-sans">
       
       {/* 1. VIBRANT BACKGROUND ELEMENTS */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-300 rounded-full blur-[120px] opacity-40 animate-pulse"></div>
