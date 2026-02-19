@@ -74,9 +74,6 @@ export default function About() {
             To empower home cooks everywhere by providing accessible, diverse, and delicious recipes that inspire creativity
             in the kitchen and bring families together around the dinner table.
           </p>
-          <button className="bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Start Cooking Today
-          </button>
           
         </div>
       </div>
