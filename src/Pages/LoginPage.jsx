@@ -1,5 +1,5 @@
 
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Card from "../Components/ui/Card"; 
 import Input from "../Components/ui/Input"; 
 import Button from "../Components/ui/Button";
@@ -80,7 +80,7 @@ export default function LoginPage() {
   };
 
   return (
-    /*<div className="min-h-screen  bg-[#f9f9f9] flex items-center justify-center p-4 relative overflow-hidden font-sans">
+    /*<div className="min-h-screen  bg-[#f9f9f9] flex items-center justify-center p-4 relative overflow-hidden font-sans">*/
     <div className="min-h-screen  bg-linear-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-4 relative overflow-hidden font-sans">
       
 
@@ -200,139 +200,5 @@ export default function LoginPage() {
       `}</style>
     </div>
   );
-}*/
-
-import React, { useState } from 'react';
-import Card from "../Components/ui/Card"; 
-import Input from "../Components/ui/Input"; 
-import Button from "../Components/ui/Button";
-// 1. Ensure Link is imported
-import { useNavigate, Link } from 'react-router-dom'; 
-import { FaEye, FaEyeSlash, FaGithub, FaGoogle, FaApple } from 'react-icons/fa';
-
-export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
-  
-  const navigate = useNavigate();
-
-  // ... (Your validation and handlers stay exactly the same)
-
-  return (
-    <div className="min-h-screen bg-linear-to-br from-orange-50 to-yellow-50 flex items-center justify-center p-4 relative overflow-hidden font-sans">
-      
-      {/* BACKGROUND ELEMENTS */}
-      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-300 rounded-full blur-[120px] opacity-40 animate-pulse"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-yellow-300 rounded-full blur-[120px] opacity-40 animate-pulse"></div>
-
-      <div className="w-full max-w-md z-10 animate-fade-in">
-        <Card
-          title="Recipe Hub"
-          subtitle="Sign in to discover delicious recipes"
-          className="bg-white/30 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] rounded-2xl"
-        >
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            
-            {/* Social Login Buttons */}
-            <div className="grid grid-cols-3 gap-3">
-              {['google', 'github', 'apple'].map((provider) => (
-                <button
-                  key={provider}
-                  type="button"
-                  onClick={() => handleSocialLogin(provider)}
-                  className="flex items-center justify-center p-3 rounded-xl border border-white/50 bg-white/40 hover:bg-white/60 transition-all duration-300 hover:shadow-lg backdrop-blur-sm cursor-pointer"
-                >
-                  {provider === 'google' && <FaGoogle className="w-5 h-5 text-red-500" />}
-                  {provider === 'github' && <FaGithub className="w-5 h-5 text-gray-900" />}
-                  {provider === 'apple' && <FaApple className="w-5 h-5 text-gray-900" />}
-                </button>
-              ))}
-            </div>
-
-            {/* Divider */}
-            <div className="relative flex items-center">
-              <div className="grow border-t border-white/40"></div>
-              <span className="shrink mx-4 text-gray-600 text-xs font-medium uppercase tracking-wider">or email</span>
-              <div className="grow border-t border-white/40"></div>
-            </div>
-
-            <Input
-              label="Email Address"
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-              error={emailError}
-              className="bg-white/40 border-white/50"
-            />
-
-            <Input
-              label="Password"
-              type={showPassword ? "text" : "password"}
-              value={password}
-              onChange={handlePasswordChange}
-              error={passwordError}
-              className="bg-white/40 border-white/50"
-              icon={
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="text-gray-500 hover:text-gray-800 focus:outline-none cursor-pointer"
-                >
-                  {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
-                </button>
-              }
-            />
-
-            {/* Remember Me & Link to ForgetPassword */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center cursor-pointer group">
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-xs border-orange-300 bg-white/20 mr-2"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                />
-                <span className="text-sm text-gray-700">Remember me</span>
-              </label>
-              
-              {/* 2. CHANGED FROM <a> TO <Link> */}
-              <Link to="/forget-password" name="forget-password" className="text-orange-600 text-sm font-semibold hover:underline">
-                Forgot Password?
-              </Link>
-            </div>
-
-            <Button 
-              type="submit" 
-              isBlock={true} 
-              isLoading={isSubmitting}
-              className="w-full bg-linear-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl font-bold cursor-pointer"
-            >
-              {isSubmitting ? 'Signing in...' : 'Sign In'}
-            </Button>
-
-            {/* 3. SIGN UP LINK */}
-            <p className="text-center text-sm pt-6 border-t border-white/30">
-              Don't have an account?{' '}
-              <Link to="/signup" className="text-orange-600 font-bold hover:underline">
-                Create account
-              </Link>
-            </p>
-          </form>
-        </Card>
-      </div>
-
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-      `}</style>
-    </div>
-  );
 }
+
