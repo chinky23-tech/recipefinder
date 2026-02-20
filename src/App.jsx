@@ -9,7 +9,7 @@ import Breakfast from "./Pages/Breakfast";
 import Lunch from "./Pages/Lunch";
 import Dinner from "./Pages/Dinner";
 import LoginPage from "./Pages/LoginPage";
-
+import ForgetPassword from "./Pages/ForgetPassword.jsx";  
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -24,6 +24,7 @@ function App() {
           <Route path="/breakfast" element={<Breakfast />} />
           <Route path="/lunch" element={<Lunch />} />
           <Route path="/dinner" element={<Dinner />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
         </Routes>
       </main>
       
