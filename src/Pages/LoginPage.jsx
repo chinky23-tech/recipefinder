@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Card from "../Components/ui/Card"; 
 import Input from "../Components/ui/Input"; 
 import Button from "../Components/ui/Button";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom'; 
 import ForgetPassword from './ForgetPassword';
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle, FaApple } from 'react-icons/fa';
 
