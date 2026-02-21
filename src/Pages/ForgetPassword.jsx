@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowLeft, KeyRound, CheckCircle2 } from 'lucide-react';
 
-// Components (Assuming relative paths)
+
 import Button from '../Components/ui/Button';
 import Card from '../Components/ui/Card';
 import Input from '../Components/ui/Input';
