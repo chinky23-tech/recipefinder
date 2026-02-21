@@ -1,5 +1,5 @@
-// components/Input.jsx
-import React from 'react';
+
+
 
 export default function Input({
   label,              // Text for the label above the input
