@@ -272,6 +272,7 @@ export default function Lunch() {
                      
                   
                  <p className="text-sm">{recipe.ingredients}</p>
+                  <p className="text-sm">{recipe.ingredients}</p>
                 </div>
               </div>
             </div>
