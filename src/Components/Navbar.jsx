@@ -71,7 +71,7 @@ const Navbar = () => {
             </button>
             {dropdownOpen && (
               <div className="ml-4 mt-2 space-y-2">
-                
+                <Link to="/breakfast" className="block text-white hover:text-orange-100" onClick={() => setMobileOpen(false)}>Breakfast</Link>
                 <Link to="/lunch" className="block text-white hover:text-orange-100" onClick={() => setMobileOpen(false)}>Lunch</Link>
                 <Link to="/dinner" className="block text-white hover:text-orange-100" onClick={() => setMobileOpen(false)}>Dinner</Link>
               </div>
