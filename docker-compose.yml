@@ -1,9 +1,48 @@
 version: "3.8"
 
 services:
-  recipefinder:
-    build: .
-    container_name: recipefinder-app
+  postgres:
+    image: postgres:16-alpine
+    container_name: recipefinder-db
     ports:
-      - "8080:80"
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: recipefinder
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      target: development
+    container_name: recipefinder-backend
+    ports:
+      - "5001:5001"
+    environment:
+      PORT: 5001
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: recipefinder
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      JWT_SECRET: recipefinder_super_secret_key_change_in_production_2024
+      JWT_ACCESS_EXPIRE: 15m
+      JWT_REFRESH_EXPIRE: 7d
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+
+volumes:
+  pgdata:
