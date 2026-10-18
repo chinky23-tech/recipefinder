@@ -1,30 +1,20 @@
-# ── Development Stage ────────────────────────────────────────
-FROM node:22-alpine AS development
+FROM python:3.12-slim as base
 
 WORKDIR /app
 
-# Install dependencies first (cached layer)
-COPY package*.json ./
-RUN npm install
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy source code
+# Install python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application source
 COPY . .
 
-EXPOSE 5001
+EXPOSE 8000
 
-# Use nodemon for hot-reloading in development
-CMD ["npx", "nodemon", "server.js"]
-
-# ── Production Stage ─────────────────────────────────────────
-FROM node:22-alpine AS production
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm ci --only=production
-
-COPY . .
-
-EXPOSE 5001
-
-CMD ["node", "server.js"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

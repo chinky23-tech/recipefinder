@@ -3,9 +3,51 @@ node_modules/
 frontend/node_modules/
 backend/node_modules/
 
-# Environment
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+.pytest_cache/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment & Secrets
 .env
+.env.*
+!.env.example
 backend/.env
+
+# Backups & Legacy
+backend_node_backup/
+*.bak
+*.backup
 
 # Build output
 dist/
@@ -22,3 +64,4 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+

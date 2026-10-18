@@ -22,23 +22,17 @@ services:
   backend:
     build:
       context: ./backend
-      target: development
     container_name: recipefinder-backend
     ports:
-      - "5001:5001"
+      - "8000:8000"
     environment:
-      PORT: 5001
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_NAME: recipefinder
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      JWT_SECRET: recipefinder_super_secret_key_change_in_production_2024
-      JWT_ACCESS_EXPIRE: 15m
-      JWT_REFRESH_EXPIRE: 7d
+      PORT: 8000
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/recipefinder
+      JWT_SECRET: recipefinder_super_secret_key_change_in_production_2026
+      JWT_ACCESS_EXPIRE_MINUTES: 1440
+      JWT_REFRESH_EXPIRE_DAYS: 7
     volumes:
       - ./backend:/app
-      - /app/node_modules
     depends_on:
       postgres:
         condition: service_healthy
